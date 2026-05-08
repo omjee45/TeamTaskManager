@@ -85,7 +85,14 @@ const Tasks = () => {
         <select 
           value={task.status} 
           onChange={(e) => handleStatusChange(task._id, e.target.value)}
-          className="text-xs bg-transparent border-none text-outline focus:ring-0 cursor-pointer pr-6"
+          disabled={
+            user?.role !== 'admin' &&
+            task.createdBy?._id !== user?._id &&
+            task.createdBy !== user?._id &&
+            task.assignedTo?._id !== user?._id &&
+            task.assignedTo !== user?._id
+          }
+          className="text-xs bg-transparent border-none text-outline focus:ring-0 cursor-pointer pr-6 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <option value="To Do">To Do</option>
           <option value="In Progress">In Progress</option>

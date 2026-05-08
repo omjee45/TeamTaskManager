@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import api from '../utils/api';
 import { AuthContext } from '../context/AuthContext';
+import { Link } from 'react-router-dom';
 
 const Dashboard = () => {
   const [stats, setStats] = useState({
@@ -14,34 +15,23 @@ const Dashboard = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchStats = async () => {
+    const fetchData = async () => {
       try {
-        const res = await api.get('/dashboard');
-        setStats(res.data);
+        const statsRes = await api.get('/dashboard');
+        setStats(statsRes.data);
       } catch (error) {
         console.error('Error fetching dashboard stats', error);
       } finally {
         setLoading(false);
       }
     };
-    fetchStats();
+    fetchData();
   }, []);
 
   if (loading) return <div className="p-8 text-on-surface-variant text-center">Loading dashboard...</div>;
 
   return (
     <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col gap-6">
-
-      <section className="w-full">
-        <div className="relative flex items-center bg-surface-container-lowest border border-outline-variant rounded-xl p-3 shadow-sm transition-colors duration-200">
-          <span className="text-xl mr-3 opacity-60">✨</span>
-          <input 
-            className="bg-transparent border-none outline-none focus:ring-0 w-full text-sm text-on-surface-variant placeholder:text-outline" 
-            placeholder="Filter tasks by priority, status, or assignee..." 
-            type="text"
-          />
-        </div>
-      </section>
 
       <section className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         
@@ -77,7 +67,9 @@ const Dashboard = () => {
             <p className="text-xs text-on-surface-variant">Stay updated with your team's progress</p>
           </div>
         </div>
-        <span className="text-primary text-sm font-bold">View Projects &rarr;</span>
+        <Link to="/projects" className="text-primary text-sm font-bold hover:underline">
+          View Projects &rarr;
+        </Link>
       </section>
 
     </main>

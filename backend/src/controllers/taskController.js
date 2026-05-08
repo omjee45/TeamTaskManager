@@ -34,6 +34,23 @@ exports.createTask = async (req, res) => {
   }
 };
 
+exports.getAllUserTasks = async (req, res) => {
+  try {
+    let query = {};
+    if (req.user.role !== 'admin') {
+      const userProjects = await Project.find({ members: req.user._id });
+      const projectIds = userProjects.map(p => p._id);
+      query = { project: { $in: projectIds } };
+    }
+    const tasks = await Task.find(query)
+      .populate('project', 'name')
+      .populate('assignedTo', 'name email');
+    res.json(tasks);
+  } catch (error) {
+    res.status(500).json({ message: 'Error fetching user tasks', error: error.message });
+  }
+};
+
 exports.getTasks = async (req, res) => {
   const { projectId } = req.params;
 
