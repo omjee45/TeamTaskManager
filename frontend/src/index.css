@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #fdfbff;
+    --on-background: #1a1b1f;
+    --surface: #fdfbff;
+    --on-surface: #1a1b1f;
+    --surface-variant: #e3e2e6;
+    --on-surface-variant: #44474f;
+    --outline: #74777f;
+    --outline-variant: #c4c6d0;
+    --primary: #4355b9;
+    --on-primary: #ffffff;
+    --primary-container: #deebff;
+    --on-primary-container: #001158;
+    --primary-fixed: #deebff;
+    --on-primary-fixed: #001158;
+    --primary-fixed-dim: #bac3ff;
+    --on-primary-fixed-variant: #2a3c9e;
+    --secondary: #5b5d72;
+    --on-secondary: #ffffff;
+    --secondary-container: #e0e1f9;
+    --on-secondary-container: #181a2c;
+    --secondary-fixed: #e0e1f9;
+    --on-secondary-fixed: #181a2c;
+    --secondary-fixed-dim: #c3c5dd;
+    --on-secondary-fixed-variant: #434659;
+    --tertiary: #77536d;
+    --on-tertiary: #ffffff;
+    --tertiary-container: #ffd7f1;
+    --on-tertiary-container: #2d1228;
+    --tertiary-fixed: #ffd7f1;
+    --on-tertiary-fixed: #2d1228;
+    --tertiary-fixed-dim: #e6b8d5;
+    --on-tertiary-fixed-variant: #5d3c55;
+    --error: #ba1a1a;
+    --on-error: #ffffff;
+    --error-container: #ffdad6;
+    --on-error-container: #410002;
+    --surface-container-highest: #e3e2e6;
+    --surface-container-high: #e9e7ec;
+    --surface-container: #efedf1;
+    --surface-container-low: #f5f2f7;
+    --surface-container-lowest: #ffffff;
+    --inverse-surface: #2f3033;
+    --inverse-on-surface: #f1f0f4;
+    --inverse-primary: #bac3ff;
+    --surface-tint: #4355b9;
+  }
+
+  .dark {
+    --background: #1a1b1f;
+    --on-background: #e3e2e6;
+    --surface: #1a1b1f;
+    --on-surface: #e3e2e6;
+    --surface-variant: #44474f;
+    --on-surface-variant: #c4c6d0;
+    --outline: #8e9099;
+    --outline-variant: #44474f;
+    --primary: #bac3ff;
+    --on-primary: #08218a;
+    --primary-container: #2a3c9e;
+    --on-primary-container: #deebff;
+    --primary-fixed: #deebff;
+    --on-primary-fixed: #001158;
+    --primary-fixed-dim: #bac3ff;
+    --on-primary-fixed-variant: #2a3c9e;
+    --secondary: #c3c5dd;
+    --on-secondary: #2d2f42;
+    --secondary-container: #434659;
+    --on-secondary-container: #e0e1f9;
+    --secondary-fixed: #e0e1f9;
+    --on-secondary-fixed: #181a2c;
+    --secondary-fixed-dim: #c3c5dd;
+    --on-secondary-fixed-variant: #434659;
+    --tertiary: #e6b8d5;
+    --on-tertiary: #44263e;
+    --tertiary-container: #5d3c55;
+    --on-tertiary-container: #ffd7f1;
+    --tertiary-fixed: #ffd7f1;
+    --on-tertiary-fixed: #2d1228;
+    --tertiary-fixed-dim: #e6b8d5;
+    --on-tertiary-fixed-variant: #5d3c55;
+    --error: #ffb4ab;
+    --on-error: #690005;
+    --error-container: #93000a;
+    --on-error-container: #ffdad6;
+    --surface-container-highest: #333438;
+    --surface-container-high: #282a2d;
+    --surface-container: #1e1f23;
+    --surface-container-low: #1a1b1f;
+    --surface-container-lowest: #0f0f13;
+    --inverse-surface: #e3e2e6;
+    --inverse-on-surface: #2f3033;
+    --inverse-primary: #4355b9;
+    --surface-tint: #bac3ff;
+  }
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}

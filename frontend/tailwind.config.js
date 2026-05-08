@@ -1,0 +1,92 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  darkMode: 'class',
+  theme: {
+    extend: {
+      "colors": {
+        "error-container": "var(--error-container)",
+        "surface-variant": "var(--surface-variant)",
+        "on-tertiary-fixed-variant": "var(--on-tertiary-fixed-variant)",
+        "on-secondary-container": "var(--on-secondary-container)",
+        "secondary-fixed": "var(--secondary-fixed)",
+        "primary": "var(--primary)",
+        "surface-container-high": "var(--surface-container-high)",
+        "on-primary-container": "var(--on-primary-container)",
+        "outline-variant": "var(--outline-variant)",
+        "secondary-fixed-dim": "var(--secondary-fixed-dim)",
+        "secondary": "var(--secondary)",
+        "surface-container-highest": "var(--surface-container-highest)",
+        "on-surface-variant": "var(--on-surface-variant)",
+        "inverse-primary": "var(--inverse-primary)",
+        "inverse-on-surface": "var(--inverse-on-surface)",
+        "on-background": "var(--on-background)",
+        "on-tertiary-container": "var(--on-tertiary-container)",
+        "surface-container-lowest": "var(--surface-container-lowest)",
+        "background": "var(--background)",
+        "inverse-surface": "var(--inverse-surface)",
+        "surface-tint": "var(--surface-tint)",
+        "tertiary-fixed-dim": "var(--tertiary-fixed-dim)",
+        "on-error": "var(--on-error)",
+        "surface-container": "var(--surface-container)",
+        "tertiary-container": "var(--tertiary-container)",
+        "surface-bright": "var(--surface-bright)",
+        "on-surface": "var(--on-surface)",
+        "on-tertiary-fixed": "var(--on-tertiary-fixed)",
+        "outline": "var(--outline)",
+        "primary-container": "var(--primary-container)",
+        "error": "var(--error)",
+        "on-tertiary": "var(--on-tertiary)",
+        "on-secondary": "var(--on-secondary)",
+        "surface-container-low": "var(--surface-container-low)",
+        "surface-dim": "var(--surface-dim)",
+        "primary-fixed-dim": "var(--primary-fixed-dim)",
+        "on-primary": "var(--on-primary)",
+        "tertiary": "var(--tertiary)",
+        "on-secondary-fixed-variant": "var(--on-secondary-fixed-variant)",
+        "secondary-container": "var(--secondary-container)",
+        "on-error-container": "var(--on-error-container)",
+        "on-primary-fixed-variant": "var(--on-primary-fixed-variant)",
+        "tertiary-fixed": "var(--tertiary-fixed)",
+        "surface": "var(--surface)",
+        "on-secondary-fixed": "var(--on-secondary-fixed)",
+        "primary-fixed": "var(--primary-fixed)",
+        "on-primary-fixed": "var(--on-primary-fixed)"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "gutter-md": "1rem",
+        "stack-lg": "1.5rem",
+        "stack-sm": "0.5rem",
+        "stack-md": "1rem",
+        "margin-mobile": "1rem"
+      },
+      "fontFamily": {
+        "body-lg": ["Inter", "sans-serif"],
+        "label-sm": ["Inter", "sans-serif"],
+        "headline-lg": ["Inter", "sans-serif"],
+        "body-md": ["Inter", "sans-serif"],
+        "headline-md": ["Inter", "sans-serif"],
+        "label-md": ["Inter", "sans-serif"],
+        "sans": ["Inter", "sans-serif"]
+      },
+      "fontSize": {
+        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+        "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }],
+        "headline-lg": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+        "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }]
+      }
+    },
+  },
+  plugins: [],
+}
