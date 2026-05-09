@@ -77,7 +77,7 @@ const Tasks = () => {
   };
 
   const renderTaskCard = (task) => (
-    <div key={task._id} className="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 shadow-sm active:scale-[0.98] transition-all duration-200">
+    <div key={task._id} className="bg-surface-container-lowest rounded-xl p-4 shadow-sm active:scale-[0.98] transition-all duration-200">
       <div className="flex justify-between items-start mb-2">
         <span className={`px-2 py-1 rounded text-xs font-bold tracking-wider uppercase ${getPriorityClasses(task.priority)}`}>
           {task.priority}
@@ -111,7 +111,7 @@ const Tasks = () => {
           </div>
         ) : <div />}
         {task.assignedTo && (
-          <div className="w-6 h-6 rounded-full flex items-center justify-center bg-primary-container text-on-primary text-[10px] font-bold border border-outline-variant">
+          <div className="w-6 h-6 rounded-full flex items-center justify-center bg-primary-container text-on-primary text-[10px] font-bold">
             {task.assignedTo.name.charAt(0).toUpperCase()}
           </div>
         )}
@@ -122,14 +122,14 @@ const Tasks = () => {
   return (
     <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col gap-8">
       
-      <div className="flex items-center gap-4 border-b border-outline-variant pb-4">
+      <div className="flex items-center gap-4 pb-4">
         <Link to="/projects" className="p-2 rounded-full hover:bg-surface-container-high transition-colors text-on-surface-variant">
           &larr;
         </Link>
         <h2 className="text-2xl font-bold text-on-surface">{projectName || 'Project'} <span className="text-on-surface-variant font-normal">Tasks</span></h2>
       </div>
 
-      <div className="bg-surface-container-lowest border border-outline-variant rounded-xl p-5 shadow-sm transition-colors duration-200">
+      <div className="bg-surface-container-lowest rounded-2xl p-5 shadow-sm transition-colors duration-200">
         <div className="flex items-center gap-2 mb-4">
           <span className="text-lg">📝</span>
           <h3 className="text-sm font-bold text-on-surface uppercase tracking-wider">Quick Add Task</h3>

@@ -17,6 +17,7 @@ app.use('/api/projects', require('./src/routes/projectRoutes'));
 app.use('/api/tasks', require('./src/routes/taskRoutes'));
 app.use('/api/dashboard', require('./src/routes/dashboardRoutes'));
 app.use('/api/users', require('./src/routes/userRoutes'));
+app.use('/api/teams', require('./src/routes/teamRoutes'));
 
 app.get('/', (req, res) => {
   res.send('API is running...');
@@ -24,6 +25,6 @@ app.get('/', (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port ${PORT}`);
 });

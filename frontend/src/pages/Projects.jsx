@@ -67,7 +67,7 @@ const Projects = () => {
       </div>
 
       {user.role === 'admin' && (
-        <div className="bg-surface-container-lowest border border-outline-variant rounded-xl p-5 shadow-sm transition-colors duration-200">
+        <div className="bg-surface-container-lowest rounded-xl p-5 shadow-sm transition-colors duration-200">
           <div className="flex items-center gap-2 mb-4">
             <span className="text-lg">➕</span>
             <h3 className="text-sm font-bold text-on-surface uppercase tracking-wider">Create New Project</h3>
@@ -79,7 +79,7 @@ const Projects = () => {
               value={name} 
               onChange={(e) => setName(e.target.value)} 
               required 
-              className="flex-1 bg-background border border-outline-variant rounded-lg px-4 py-2 text-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+              className="flex-1 bg-background rounded-lg px-4 py-2 text-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
             />
             <input 
               type="text" 
@@ -87,7 +87,7 @@ const Projects = () => {
               value={description} 
               onChange={(e) => setDescription(e.target.value)} 
               required 
-              className="flex-[2] bg-background border border-outline-variant rounded-lg px-4 py-2 text-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+              className="flex-[2] bg-background rounded-lg px-4 py-2 text-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
             />
             <button type="submit" className="bg-primary text-on-primary rounded-lg px-6 py-2 text-sm font-bold hover:opacity-90 active:scale-95 transition-all shadow-sm">
               Create
@@ -104,7 +104,7 @@ const Projects = () => {
           </div>
         ) : (
           projects.map(project => (
-            <div key={project._id} className="bg-surface-container-lowest border border-outline-variant rounded-xl p-5 shadow-sm flex flex-col gap-4 transition-colors duration-200 hover:shadow-md">
+            <div key={project._id} className="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col gap-4 transition-colors duration-200 hover:shadow-md">
               <div>
                 <h3 className="text-lg font-bold text-on-surface mb-1">{project.name}</h3>
                 <p className="text-sm text-on-surface-variant line-clamp-2">{project.description}</p>
@@ -132,7 +132,7 @@ const Projects = () => {
                       <select 
                         value={addMemberData.userId}
                         onChange={(e) => setAddMemberData({ ...addMemberData, userId: e.target.value })}
-                        className="bg-background border border-outline-variant rounded-lg px-3 py-1.5 text-sm focus:border-primary outline-none"
+                        className="bg-background rounded-lg px-3 py-1.5 text-sm focus:border-primary outline-none"
                       >
                         <option value="">Select a user...</option>
                         {allUsers
@@ -144,11 +144,11 @@ const Projects = () => {
                       </select>
                       <div className="flex gap-2">
                         <button onClick={() => handleAddMember(project._id)} className="bg-primary text-on-primary rounded-lg px-3 py-1.5 text-xs font-bold hover:opacity-90">Add</button>
-                        <button onClick={() => setShowAddMember(null)} className="border border-outline-variant text-on-surface-variant rounded-lg px-3 py-1.5 text-xs font-bold hover:bg-surface-container-high">Cancel</button>
+                        <button onClick={() => setShowAddMember(null)} className="text-on-surface-variant rounded-lg px-3 py-1.5 text-xs font-bold hover:bg-surface-container-high">Cancel</button>
                       </div>
                     </div>
                   ) : (
-                    <button onClick={() => setShowAddMember(project._id)} className="border border-outline-variant text-on-surface-variant rounded-lg px-3 py-1.5 text-xs font-bold hover:bg-surface-container-high transition-colors">
+                    <button onClick={() => setShowAddMember(project._id)} className="text-on-surface-variant rounded-lg px-3 py-1.5 text-xs font-bold hover:bg-surface-container-high transition-colors">
                       + Add Member
                     </button>
                   )}
