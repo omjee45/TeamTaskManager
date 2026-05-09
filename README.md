@@ -4,8 +4,7 @@ A project I made for my college submission. Basically its a task management tool
 
 ## Live Demo
 
-- **Frontend**: https://frontend-production-b11e.up.railway.app/dashboard
-- **Backend API**: https://teamtaskmanager-production-4587.up.railway.app/
+https://frontend-production-b11e.up.railway.app/
 
 You can register a new account or use existing credentials to test it out.
 
