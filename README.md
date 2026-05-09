@@ -82,5 +82,4 @@ team-task-manager/
 
 Deployed both frontend and backend on Railway as separate services connected to the same GitHub repo. Backend uses the `/backend` root directory and frontend uses `/frontend`. Environment variables are set through Railway dashboard.
 
----
-Made for college project submission.
+
