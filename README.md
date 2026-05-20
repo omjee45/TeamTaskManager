@@ -4,7 +4,8 @@ A project I made for my college submission. Basically its a task management tool
 
 ## Live Demo
 
-https://frontend-production-b11e.up.railway.app/
+https://meticulous-comfort-production-937c.up.railway.app
+
 
 You can register a new account or use existing credentials to test it out.
 
